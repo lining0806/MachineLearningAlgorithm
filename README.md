@@ -20,5 +20,3 @@
 结果示例：
 ![image](./Regression/standRegresResults.png)
 ![image](./Regression/lwlrResults.png)
-
-参照：《机器学习实战》
