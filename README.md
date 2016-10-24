@@ -12,4 +12,13 @@
 
 * 针对文本分类的 LogisticRegression 算法
 
+* 回归算法：
+	* 标准的线性回归
+	* 局部加权线性回归
+	* 岭回归
+
+结果示例：
+![image](./Regression/standRegresResults.png)
+![image](./Regression/lwlrResults.png)
+
 参照：《机器学习实战》

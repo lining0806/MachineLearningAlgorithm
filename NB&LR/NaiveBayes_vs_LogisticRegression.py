@@ -51,26 +51,44 @@ class NaiveBayes():
         param = p0, p1, p0Vec, p1Vec
         return vocabList, param
 
-    def predict(self, test_X, test_y, vocabList, param):
+    def predict(self, test_X, vocabList, param):
         p0, p1, p0Vec, p1Vec = param
         testMat = []
         for wordList in test_X:
             testMat.append(self.listOfWords2Vec(vocabList, wordList))
         testMatrix = np.array(testMat) ## array
-        testLabel = np.array(test_y) ## array
         predict_y = []
         for vec in testMatrix:
             prob_y0 = sum(vec*p0Vec)+np.log(p0) # 对应p(w1|c0)*p(w2|c0)*...*p(c0)，log(a*b) = log(a)+log(b)
             prob_y1 = sum(vec*p1Vec)+np.log(p1) # 对应p(w1|c1)*p(w2|c1)*...*p(c1)，log(a*b) = log(a)+log(b)
-            if prob_y0 < prob_y1:
+            if prob_y0 < prob_y1: ## 对应0/1分类，但是NaiveBayes可以修改成多分类
                 predict_y.append(1)
             else:
                 predict_y.append(0)
         predictLabel = np.array(predict_y) ## array
-        print 'accuracy:', sum(testLabel==predictLabel)/float(len(testLabel))
         return predictLabel
 
-class LogisticRegression(): # 二分类
+    def predict1(self, test_X, test_y, vocabList, param):
+        p0, p1, p0Vec, p1Vec = param
+        testMat = []
+        for wordList in test_X:
+            testMat.append(self.listOfWords2Vec(vocabList, wordList))
+        testMatrix = np.array(testMat) ## array
+        m = testMatrix.shape[0]
+        predict_y = []
+        for vec in testMatrix:
+            prob_y0 = sum(vec*p0Vec)+np.log(p0) # 对应p(w1|c0)*p(w2|c0)*...*p(c0)，log(a*b) = log(a)+log(b)
+            prob_y1 = sum(vec*p1Vec)+np.log(p1) # 对应p(w1|c1)*p(w2|c1)*...*p(c1)，log(a*b) = log(a)+log(b)
+            if prob_y0 < prob_y1: ## 对应0/1分类，但是NaiveBayes可以修改成多分类
+                predict_y.append(1)
+            else:
+                predict_y.append(0)
+        testLabel = np.array(test_y) ## array
+        predictLabel = np.array(predict_y) ## array
+        print 'accuracy:', sum(testLabel==predictLabel)/float(m)
+        return predictLabel
+
+class LogisticRegression(): # 二分类，0/1分类
     def __init__(self):
         pass
 
@@ -102,29 +120,48 @@ class LogisticRegression(): # 二分类
         trainMatrix = np.matrix(trainMat) ## matrix是二维的 # size: m*n
         trainLabel = np.matrix(train_y).T ## matrix是二维的 # size: m*1
         m, n = trainMatrix.shape
-        weigh = np.ones((n, 1)) # size: n*1
+        weigh = np.matrix(np.ones((n, 1))) # size: n*1
         for i in range(maxCycles):
-            hx = self.sigmoid(trainMatrix*weigh) # size: m*1
+            hx = self.sigmoid(trainMatrix*weigh) # size: m*1 sigmoid把线性回归转换到[0,1]之间，对应概率
             error = trainLabel-hx # size: m*1
             weigh += alpha*trainMatrix.T*error # size: n*1
         return vocabList, weigh
 
     # 使用学习得到的参数进行分类
-    def predict(self, test_X, test_y, vocabList, weigh):
+    def predict(self, test_X, vocabList, weigh):
         testMat = []
         for wordList in test_X:
             testMat.append(self.listOfWords2Vec(vocabList, wordList))
         testMatrix = np.matrix(testMat) ## matrix是二维的
-        testLabel = np.array(test_y) ## array
-        hx = self.sigmoid(testMatrix*weigh) # size: m*1
+        m = testMatrix.shape[0]
+        hx = self.sigmoid(testMatrix*weigh) # size: m*1 sigmoid把线性回归转换到[0,1]之间，对应概率
         predict_y = []
-        for i in range(len(testLabel)):
+        for i in range(m): ## 对应0/1分类
             if hx[i][0] > 0.5:
                 predict_y.append(1)
             else:
                 predict_y.append(0)
         predictLabel = np.array(predict_y) ## array
-        print 'accuracy:', sum(testLabel==predictLabel)/float(len(testLabel))
+        # predictLabel = np.matrix(predict_y).T ## matrix
+        return predictLabel
+
+    # 使用学习得到的参数进行分类
+    def predict1(self, test_X, test_y, vocabList, weigh):
+        testMat = []
+        for wordList in test_X:
+            testMat.append(self.listOfWords2Vec(vocabList, wordList))
+        testMatrix = np.matrix(testMat) ## matrix是二维的
+        m = testMatrix.shape[0]
+        hx = self.sigmoid(testMatrix*weigh) # size: m*1 sigmoid把线性回归转换到[0,1]之间，对应概率
+        predict_y = []
+        for i in range(m): ## 对应0/1分类
+            if hx[i][0] > 0.5:
+                predict_y.append(1)
+            else:
+                predict_y.append(0)
+        testLabel = np.array(test_y) ## array
+        predictLabel = np.array(predict_y) ## array
+        print 'accuracy:', sum(testLabel==predictLabel)/float(m)
         return predictLabel
 
 def loadTrainDataSet():
@@ -150,9 +187,13 @@ if __name__ == '__main__':
     test_X, test_y = loadTestDataSet()
     clf = NaiveBayes()
     vocabList, param = clf.fit(train_X, train_y)
-    results = clf.predict(test_X, test_y, vocabList, param)
+    results = clf.predict(test_X, vocabList, param)
     print results
+    results1 = clf.predict1(test_X, test_y, vocabList, param)
+    print results1
     clf = LogisticRegression()
     vocabList, weigh = clf.fit(train_X, train_y)
-    results = clf.predict(test_X, test_y, vocabList, weigh)
+    results = clf.predict(test_X, vocabList, weigh)
     print results
+    results1 = clf.predict1(test_X, test_y, vocabList, weigh)
+    print results1
