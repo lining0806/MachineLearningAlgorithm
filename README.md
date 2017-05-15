@@ -12,7 +12,7 @@
 
 * 样本协方差、协方差矩阵
 
-##### 算法包括：
+#### 算法包括：
 
 * Apriori 算法
 
@@ -32,6 +32,6 @@
 	
 	* 岭回归
 
-##### 结果示例：
+#### 结果示例：
 ![image](./Regression/standRegresResults.png)
 ![image](./Regression/lwlrResults.png)
