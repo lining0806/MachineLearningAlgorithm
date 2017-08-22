@@ -45,3 +45,4 @@
 ![image](./AlgoNote/Regression/standRegresResults.png)
 
 ![image](./AlgoNote/Regression/lwlrResults.png)
+
