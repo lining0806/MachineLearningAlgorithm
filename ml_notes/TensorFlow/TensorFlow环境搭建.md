@@ -86,17 +86,17 @@ TensorFlow支持Ubuntu、Mac OS X、Windows，也支持从源码安装。本文�
 
 ![image](python2test.png)
 
-##### 程序会报错，指出来tf.estimator模块下不存在LinearRegressor属性。
+#### 程序会报错，指出来tf.estimator模块下不存在LinearRegressor属性。
 
 为什么会出现这个问题呢？我想可能是Python2下的tensorflow库中一些上层接口功能没有跟进，而且考虑到Python2版本到2020年会停止支持，因此Google官方可能对Python3下的tensorflow库支持会更全面一些。既然这样，从Python2环境切换到Python3环境，是一个避免这些问题的办法。
 
 与Virualenv类似，Anaconda支持搭建Python的虚拟环境，也就是说，无论Anaconda是基于Python2版本还是Python3版本，我们都可以搭建Python的双版本共存环境，根据项目需要，随时可以切换版本。
 
-##### 搭建Python3环境：
+#### 搭建Python3环境：
 
 ![image](python3.png)
 
-##### 激活python3环境，并运行Test.py：
+#### 激活python3环境，并运行Test.py：
 
 ![image](python3test.png)
 
