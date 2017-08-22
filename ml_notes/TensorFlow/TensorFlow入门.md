@@ -1,4 +1,4 @@
-**TensorFlow**是Google维护的一个基于数据图的可扩展的机器学习框架，其项目地址位于 https://github.com/tensorflow/tensorflow ，我们可以从项目中找到官方的文档说明。
+**TensorFlow**是Google维护的一个基于数据流图的可扩展的机器学习框架，其项目地址位于 https://github.com/tensorflow/tensorflow ，我们可以从项目中找到官方的文档说明。
 
 ![image](TensorFlow.png)
 
