@@ -38,3 +38,12 @@
 
 ![image](./algo_notes/Regression/lwlrResults.png)
 
+### 3. 一些常用的机器学习框架
+
+#### 框架包括：
+
+* Keras
+
+* TensorFlow
+
+* sklearn
