@@ -1,4 +1,4 @@
-### 1. 概率统计中常见概念总结
+### 1. [概率统计中常见概念总结](https://github.com/lining0806/MachineLearingAlgorithm/blob/master/math_notes/README.md)
 
 * 总体均值、总体方差
 

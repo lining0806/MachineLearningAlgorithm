@@ -1,3 +1,3 @@
-![image](./math_notes/math1.jpg)
+![image](math1.jpg)
 
-![image](./math_notes/math2.jpg)
+![image](math2.jpg)
