@@ -1,6 +1,4 @@
-### 一些常用的机器学习算法实现
-
-#### 概率统计中常见概念总结
+### 1. 概率统计中常见概念总结
 
 * 总体均值、总体方差
 
@@ -14,10 +12,12 @@
 
 *** 
 
-![image](./MathNote/MathNote1.jpg)
-![image](./MathNote/MathNote2.jpg)
+![image](./MathNotes/MathNote1.jpg)
+![image](./MathNotes/MathNote2.jpg)
 
 *** 
+
+### 2. 一些常用的机器学习算法实现
 
 #### 算法包括：
 
@@ -41,5 +41,5 @@
 
 #### 结果示例：
 
-![image](./Regression/standRegresResults.png)
-![image](./Regression/lwlrResults.png)
+![image](./AlgoNotes/Regression/standRegresResults.png)
+![image](./AlgoNotes/Regression/lwlrResults.png)
