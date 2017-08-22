@@ -10,14 +10,6 @@
 
 * 样本协方差、协方差矩阵
 
-*** 
-
-![image](./math_notes/math1.jpg)
-
-![image](./math_notes/math2.jpg)
-
-*** 
-
 ### 2. 一些常用的机器学习算法实现
 
 #### 算法包括：
