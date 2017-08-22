@@ -12,9 +12,9 @@
 
 *** 
 
-![image](MathNote/MathNote1.jpg)
+![image](math_notes/math1.jpg)
 
-![image](MathNote/MathNote2.jpg)
+![image](math_notes/math2.jpg)
 
 *** 
 
@@ -42,7 +42,7 @@
 
 #### 结果示例：
 
-![image](AlgoNote/Regression/standRegresResults.png)
+![image](algo_notes/Regression/standRegresResults.png)
 
-![image](AlgoNote/Regression/lwlrResults.png)
+![image](algo_notes/Regression/lwlrResults.png)
 
