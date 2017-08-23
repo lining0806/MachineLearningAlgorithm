@@ -42,8 +42,7 @@
 
 #### 框架包括：
 
-* [Keras](./ml_notes/Keras/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BKeras%E5%85%A5%E9%97%A8.md)
+* Keras [[1](./ml_notes/Keras/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BKeras%E5%85%A5%E9%97%A8.md)]
 
-* [TensorFlow](./ml_notes/TensorFlow/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BTensorFlow%E5%85%A5%E9%97%A8.md)
-
-* [sklearn](./ml_notes/sklearn/sklearn%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93.md)
+* TensorFlow [[1](./ml_notes/TensorFlow/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BTensorFlow%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md)] [[2](./ml_notes/TensorFlow/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BTensorFlow%E5%85%A5%E9%97%A8.md)]
+* sklearn [[1](./ml_notes/sklearn/sklearn%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93.md)]
