@@ -1,4 +1,4 @@
-### 1. [概率统计中常见概念总结](https://github.com/lining0806/MachineLearingAlgorithm/blob/master/math_notes/README.md)
+### 1. [概率统计中常见概念总结](./math_notes/README.md)
 
 * 总体均值、总体方差
 
@@ -44,6 +44,6 @@
 
 * [Keras](./ml_notes/Keras/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BKeras%E5%85%A5%E9%97%A8.md)
 
-* TensorFlow
+* [TensorFlow](./ml_notes/TensorFlow/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BTensorFlow%E5%85%A5%E9%97%A8.md)
 
-* sklearn
+* [sklearn](./ml_notes/sklearn/sklearn%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93.md)
