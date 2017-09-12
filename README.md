@@ -34,9 +34,9 @@
 
 #### 结果示例：
 
-![image](./algo_notes/Regression/standRegresResults.png)
+![image](./algo_notes/LinearRegression/standRegresResults.png)
 
-![image](./algo_notes/Regression/lwlrResults.png)
+![image](./algo_notes/LinearRegression/lwlrResults.png)
 
 ### 3. 一些常用的机器学习框架
 
